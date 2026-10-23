@@ -1,0 +1,100 @@
+{
+ "lecture_notes.pdf": {
+  "title": "Software Project Management Lecture Notes",
+  "unit": "4",
+  "kind": "Reference",
+  "topics": [
+   "Step-wise planning",
+   "PRINCE2 methodology",
+   "PMBOK framework",
+   "Cost-benefit analysis",
+   "Work breakdown structure"
+  ],
+  "summary": "These lecture notes cover core concepts in software project management, including step-wise planning, PRINCE2 principles, and PMBOK knowledge areas. They also explain cost-benefit analysis and resource allocation for managing IT and software projects.",
+  "by": "llm",
+  "pages": 31,
+  "sha1": "572998feab7e11d709a934567e6e2d38d8c6163a",
+  "original_name": "Unit-2_lecture_notes.pdf",
+  "uploaded_at": "2026-10-18 11:40",
+  "collection": "Reference"
+ },
+ "unit1_Lec.pdf": {
+  "title": "Project Management Monitoring and Control",
+  "unit": "2",
+  "kind": "Lecture notes",
+  "collection": "Unit 1",
+  "topics": [
+   "Monitoring and Control",
+   "Risk Identification",
+   "Performance Measurement",
+   "Resource Monitoring",
+   "Earned Value Analysis"
+  ],
+  "summary": "These lecture notes cover the fundamentals of monitoring and control in project management, detailing their purpose, key activities, and challenges. They also introduce techniques such as Earned Value Analysis for tracking project progress and performance.",
+  "by": "llm",
+  "unit_by": "teacher",
+  "pages": 51,
+  "sha1": "f1fd4512868752cb12e20325f01bcae36428b45f",
+  "uploaded_at": "2026-10-22 00:47"
+ },
+ "unit2_SPM_niotes.pdf": {
+  "title": "SPM_Unit-2_notes",
+  "unit": "2",
+  "kind": "Lecture notes",
+  "topics": [
+   "Step-wise planning",
+   "PRINCE2",
+   "PMBOK",
+   "Cost-benefit analysis",
+   "Software project management"
+  ],
+  "summary": "These lecture notes cover foundational software project management concepts, including step-wise planning, the PRINCE2 methodology, PMBOK guidelines, and cost-benefit analysis. Despite the file naming, the content focuses on project management principles rather than the core course units.",
+  "by": "llm",
+  "pages": 31,
+  "sha1": "572998feab7e11d709a934567e6e2d38d8c6163a",
+  "original_name": "Unit-2_SPM_niotes.pdf",
+  "uploaded_at": "2026-10-22 01:37",
+  "collection": "",
+  "unit_by": "teacher"
+ },
+ "unit4_SPM_notes.pdf": {
+  "title": "Unit 4 Project Monitoring and Control Notes",
+  "unit": "4",
+  "kind": "Lecture notes",
+  "topics": [
+   "Monitoring and control",
+   "Risk identification",
+   "Earned Value Analysis",
+   "Resource constraints",
+   "Change control"
+  ],
+  "summary": "These lecture notes cover project monitoring and control principles, including progress tracking, risk management, and Earned Value Analysis. They also address common project challenges like communication breakdowns and resource constraints.",
+  "by": "llm",
+  "pages": 51,
+  "sha1": "f1fd4512868752cb12e20325f01bcae36428b45f",
+  "original_name": "Unit-4_SPM_notes.pdf",
+  "uploaded_at": "2026-10-22 01:37",
+  "collection": ""
+ },
+ "Agentic_AI_Syllabus.pdf": {
+  "title": "Agentic AI  BTech CSE Syllabus",
+  "unit": "Syllabus",
+  "kind": "Syllabus",
+  "topics": [
+   "Course Objectives and Outcomes",
+   "Foundations of Agentic AI",
+   "LLM Frameworks and RAG",
+   "Multi-Agent Systems",
+   "Deployment and Integration"
+  ],
+  "summary": "This document outlines the official course syllabus for Agentic AI, detailing the five units, course outcomes, evaluation scheme, and list of practical experiments. It provides a comprehensive overview of the curriculum covering foundations, frameworks, multi-agent systems, safety, and deployment.",
+  "by": "llm",
+  "unit_by": "teacher",
+  "subject": "Agentic AI (Sem-7)",
+  "pages": 4,
+  "sha1": "29b5755fea9449b8e54a5ee3b838cf51c9703b88",
+  "original_name": "Agentic AI Syllabus.pdf",
+  "uploaded_at": "2026-10-22 19:38",
+  "collection": ""
+ }
+}

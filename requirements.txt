@@ -1,0 +1,19 @@
+# Tested on 16 Oct 2026 (Python 3.11 on Windows, 3.13 on Linux)
+langgraph>=1.0,<2
+langgraph-checkpoint-sqlite>=3.0,<4
+langchain-core>=1.0,<2
+langchain-google-genai>=4.0,<5      # Gemini (default LLM)
+chromadb>=1.0,<2
+streamlit>=1.48,<2
+pypdf>=5.0
+pypdfium2>=4.30                     # shows the source page of an answer
+pandas>=2.0
+matplotlib>=3.8
+python-dotenv>=1.0
+fpdf2>=2.8                          # PDF export
+ddgs>=9.0                           # backup web search (DuckDuckGo) when Gemini's search quota is used up
+
+# Optional: only if you switch LLM_PROVIDER in .env
+# langchain-openai>=1.0       # LLM_PROVIDER=openai
+# langchain-anthropic>=1.0    # LLM_PROVIDER=anthropic
+# langchain-groq>=1.0         # LLM_PROVIDER=groq

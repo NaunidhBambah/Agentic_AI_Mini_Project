@@ -1,0 +1,14 @@
+[
+  {"id": "seed-ta-1", "ta": "Priya (TA)", "topic": "Function calling & tools",
+   "question": "What is the difference between a tool and a function in LangChain?",
+   "answer": "In LangChain a tool is a Python function wrapped with a name, a description and an argument schema so the LLM can decide when to call it. Every tool runs a function, but a plain function becomes a tool only after you describe it (for example with the @tool decorator). The description is what the model reads when choosing tools."},
+  {"id": "seed-ta-2", "ta": "Priya (TA)", "topic": "RAG & chunking",
+   "question": "Should I use 500 or 1000 characters as chunk size for lecture slides?",
+   "answer": "For slides, smaller chunks (around 300-600 characters) usually work better because each slide is already a self-contained idea. Keep about 10-15% overlap and test both sizes on 10 real questions: pick the size that retrieves the right slide most often."},
+  {"id": "seed-ta-3", "ta": "Rahul (TA)", "topic": "Deployment",
+   "question": "Why does my Streamlit app lose data after it restarts on the cloud?",
+   "answer": "Free hosting platforms often do not keep files written to local disk. After a restart or sleep the container is rebuilt, so SQLite or Chroma files saved there can disappear. Rebuild indexes from source files on startup and store important records in a hosted database (for example Supabase free tier)."},
+  {"id": "seed-ta-4", "ta": "Rahul (TA)", "topic": "Multi-agent systems",
+   "question": "Is LangGraph better than CrewAI for human approval steps?",
+   "answer": "For approval steps LangGraph gives more control: interrupt() pauses the graph, the state is checkpointed, and you resume it later with the human's input. CrewAI supports human_input on tasks, which is simpler but asks in the console during the run. Use LangGraph when the human may answer much later."}
+]

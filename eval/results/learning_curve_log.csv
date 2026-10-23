@@ -1,0 +1,49 @@
+week,kind,question,status,answered_by
+1,new topic,What is the primary purpose of the Delphi technique in software project effort estimation?,escalated,
+1,new topic,How does Function Point Analysis (FPA) differ from Source Lines of Code (SLOC) in measuring software size?,escalated,
+1,new topic,What are the key phases in the Rational Unified Process (RUP) software development lifecycle?,escalated,
+1,new topic,What is the Critical Path Method (CPM) in project network analysis?,escalated,
+1,new topic,What are the primary risk categories defined in the SEI Taxonomy-Based Risk Identification method?,escalated,
+1,new topic,What is the purpose of a Software Quality Assurance (SQA) plan in project management?,answered,agent
+1,in notes,What is step-wise planning in software projects?,answered,agent
+1,in notes,What is monitoring in project management?,answered,agent
+1,in notes,What are the typical deliverables identified in a software project?,answered,agent
+1,in notes,What is the control phase in project management?,answered,agent
+1,in notes,What are the core principles of PRINCE2?,answered,agent
+1,in notes,What are the benefits of timely issue identification and resolution?,answered,agent
+1,in notes,Why is PRINCE2 important in software projects?,answered,agent
+1,in notes,How do resource constraints affect monitoring and control?,answered,agent
+1,in notes,How does PMBOK help with project risk analysis across companies?,answered,agent
+1,in notes,How is cost variance calculated in project management?,answered,agent
+2,new topic,How does the Delphi method help in software effort estimation?,verified,memory:Sim TA
+2,new topic,What is the difference between measuring software size using SLOC versus Function Points?,verified,memory:Sim TA
+2,new topic,Can you outline the four phases of the RUP framework?,answered,agent
+2,new topic,How do you determine the critical path in a project schedule network?,verified,memory:Sim TA
+2,new topic,How does the SEI taxonomy classify software project risks?,escalated,
+2,new topic,What does an SQA plan entail for a software project?,escalated,
+2,in notes,What is step-wise planning in software projects?,answered,agent
+2,in notes,What is monitoring in project management?,answered,agent
+2,in notes,What are the typical deliverables identified in a software project?,answered,agent
+2,in notes,What is the control phase in project management?,answered,agent
+2,in notes,What are the core principles of PRINCE2?,answered,agent
+2,in notes,What are the benefits of timely issue identification and resolution?,answered,agent
+2,in notes,Why is PRINCE2 important in software projects?,answered,agent
+2,in notes,How do resource constraints affect monitoring and control?,escalated,
+2,in notes,How does PMBOK help with project risk analysis across companies?,answered,agent
+2,in notes,How is cost variance calculated in project management?,answered,agent
+3,new topic,Can you explain the Delphi technique for estimating project size?,verified,memory:Sim TA
+3,new topic,Why might someone choose Function Point Analysis over lines of code for estimation?,escalated,
+3,new topic,What are the stages of RUP in software engineering?,verified,memory:Sim TA
+3,new topic,What does the critical path signify in project management?,verified,memory:Sim TA
+3,new topic,What are the main areas of risk examined in the SEI risk taxonomy?,verified,memory:Sim TA
+3,new topic,How is quality assurance formally structured in software management?,answered,agent
+3,in notes,What is step-wise planning in software projects?,answered,agent
+3,in notes,What is monitoring in project management?,answered,agent
+3,in notes,What are the typical deliverables identified in a software project?,answered,agent
+3,in notes,What is the control phase in project management?,answered,agent
+3,in notes,What are the core principles of PRINCE2?,answered,agent
+3,in notes,What are the benefits of timely issue identification and resolution?,answered,agent
+3,in notes,Why is PRINCE2 important in software projects?,answered,agent
+3,in notes,How do resource constraints affect monitoring and control?,answered,agent
+3,in notes,How does PMBOK help with project risk analysis across companies?,answered,agent
+3,in notes,How is cost variance calculated in project management?,answered,agent

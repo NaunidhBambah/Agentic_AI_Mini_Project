@@ -1,0 +1,8 @@
+.env
+.streamlit/secrets.toml
+runtime/
+eval/results/_runtime*/
+venv/
+.venv/
+__pycache__/
+*.pyc

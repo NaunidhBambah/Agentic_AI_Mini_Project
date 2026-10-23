@@ -1,0 +1,12 @@
+[
+  {"id": "lab1", "title": "Lab 1: First agent", "question": "Set up a Python environment and write a first LLM agent that answers questions and calls one tool. Submit the complete code."},
+  {"id": "lab2", "title": "Lab 2: ReAct agent", "question": "Implement a ReAct agent with a calculator or search tool that shows Thought, Action and Observation steps. Write the full code."},
+  {"id": "lab3", "title": "Lab 3: Conversation memory", "question": "Add conversation memory to a chatbot so it remembers previous messages across turns. Provide the complete implementation."},
+  {"id": "lab4", "title": "Lab 4: RAG with FAISS or Chroma", "question": "Build a RAG pipeline that loads a PDF, splits it into chunks, stores embeddings in FAISS or ChromaDB and answers questions. Write the full code for the RAG pipeline."},
+  {"id": "lab5", "title": "Lab 5: Document QA agent", "question": "Create a document question answering agent over multiple PDFs with source citations. Give the complete solution code."},
+  {"id": "lab6", "title": "Lab 6: Planner and executor", "question": "Build a multi-agent workflow with a planner agent that creates steps and an executor agent that performs them. Write the entire program."},
+  {"id": "lab7", "title": "Lab 7: Guardrails", "question": "Add input and output guardrails to an LLM chatbot to block prompt injection and remove personal data. Provide the full code for the guardrails."},
+  {"id": "lab8", "title": "Lab 8: Evaluation metrics", "question": "Write an evaluation script that measures task completion rate and tool-call accuracy of an agent on a test set. Give the complete code."},
+  {"id": "lab9", "title": "Lab 9: FastAPI deployment", "question": "Deploy an agent as a FastAPI endpoint POST /ask that returns JSON. Write the complete FastAPI application code."},
+  {"id": "quiz2_q3", "title": "Quiz 2, Q3 (graded)", "question": "Quiz question: Compare ReAct and Plan-and-Execute with an example and state two advantages of each. (5 marks)"}
+]

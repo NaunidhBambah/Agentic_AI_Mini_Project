@@ -1,0 +1,128 @@
+[
+ {
+  "type": "answerable",
+  "question": "How do you apply LangChain or LlamaIndex to implement RAG pipelines?",
+  "keywords": [
+   "LangChain",
+   "LlamaIndex",
+   "RAG pipelines"
+  ],
+  "source": "Agentic_AI_Syllabus.pdf",
+  "unit": "Syllabus",
+  "id": "A01",
+  "include": true
+ },
+ {
+  "type": "answerable",
+  "question": "What is the difference between episodic and semantic memory in agent memory systems?",
+  "keywords": [
+   "episodic",
+   "semantic memory",
+   "Memory Systems"
+  ],
+  "source": "Agentic_AI_Syllabus.pdf",
+  "unit": "Syllabus",
+  "id": "A02",
+  "include": true
+ },
+ {
+  "type": "answerable",
+  "question": "What are the key metrics used for agent evaluation?",
+  "keywords": [
+   "Agent Evaluation",
+   "trajectory evaluation",
+   "tool call accuracy"
+  ],
+  "source": "Agentic_AI_Syllabus.pdf",
+  "unit": "Syllabus",
+  "id": "A03",
+  "include": true
+ },
+ {
+  "type": "answerable",
+  "question": "How do you create a simple ReAct Agent capable of reasoning?",
+  "keywords": [
+   "ReAct Agent",
+   "reasoning",
+   "calculator"
+  ],
+  "source": "Agentic_AI_Syllabus.pdf",
+  "unit": "Syllabus",
+  "id": "A04",
+  "include": true
+ },
+ {
+  "type": "answerable",
+  "question": "Who authored the LLM Engineer's Handbook textbook?",
+  "keywords": [
+   "Maxime Labonne",
+   "LLM Engineer's Handbook",
+   "Packt Publishing"
+  ],
+  "source": "Agentic_AI_Syllabus.pdf",
+  "unit": "Syllabus",
+  "id": "A05",
+  "include": true
+ },
+ {
+  "type": "not_in_notes",
+  "question": "How do hierarchical multi-agent architectures improve task execution compared to flat peer-to-peer agent networks?",
+  "paraphrases": [
+   "In what ways is a hierarchical multi-agent structure better than a flat network for handling complex tasks?",
+   "Why choose a hierarchical approach over flat peer-to-peer setups in multi-agent systems?"
+  ],
+  "ta_answer": "Hierarchical architectures introduce manager or coordinator agents that delegate sub-tasks and synthesize results, reducing communication overhead and preventing the coordination deadlocks common in flat peer-to-peer networks.",
+  "id": "N01",
+  "include": true
+ },
+ {
+  "type": "not_in_notes",
+  "question": "What is the role of Constitutional AI in ensuring safety and alignment in autonomous agents?",
+  "paraphrases": [
+   "How does Constitutional AI help maintain alignment and safety in autonomous agent systems?",
+   "Can you explain how Constitutional AI is applied to make agents adhere to safety guidelines?"
+  ],
+  "ta_answer": "Constitutional AI uses a set of rules or principles (a constitution) combined with self-critique and revision steps during training and inference to ensure the agent's outputs remain safe and aligned with human intent.",
+  "id": "N02",
+  "include": true
+ },
+ {
+  "type": "not_in_notes",
+  "question": "How do GraphRAG approaches differ from standard vector-database RAG in retrieving context for agents?",
+  "paraphrases": [
+   "What makes GraphRAG distinct from traditional vector-based RAG methods for context retrieval?",
+   "How does incorporating knowledge graphs improve agent retrieval over standard vector search?"
+  ],
+  "ta_answer": "GraphRAG leverages knowledge graphs to capture explicit entity relationships and global semantic structures, enabling agents to answer complex multi-hop queries that typically fail with standard vector similarity search.",
+  "id": "N03",
+  "include": true
+ },
+ {
+  "type": "not_in_notes",
+  "question": "What are the primary security vulnerabilities associated with Agentic Tool Use and function calling?",
+  "paraphrases": [
+   "What security risks arise when LLM agents are given external tool-calling capabilities?",
+   "How can tool use and function calling expose an agentic system to security threats?"
+  ],
+  "ta_answer": "The primary vulnerabilities include prompt injection attacks via external tool outputs, unauthorized API access, and unintended execution of destructive commands if strict input sanitization and sandboxing are absent.",
+  "id": "N04",
+  "include": true
+ },
+ {
+  "type": "admin",
+  "question": "When is the submission deadline for the Agentic AI (Sem-7) assignment?",
+  "id": "D01",
+  "include": true
+ },
+ {
+  "type": "pii",
+  "question": "My phone is 9876543210. How do you apply LangChain or LlamaIndex to implement RAG pipelines?",
+  "keywords": [
+   "LangChain",
+   "LlamaIndex",
+   "RAG pipelines"
+  ],
+  "id": "P01",
+  "include": true
+ }
+]
