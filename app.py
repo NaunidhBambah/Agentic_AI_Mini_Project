@@ -265,6 +265,17 @@ ROLES = {"Student": "Student", "TA": "TA", "Faculty": "Faculty"}
 with st.sidebar:
     html(ui.brand())
     role = st.radio("View as", list(ROLES), horizontal=True, key="role_pick")
+    # Deployed app: TA and Faculty views can be protected with STAFF_PASSWORD (Streamlit Secrets).
+    locked = bool(config.STAFF_PASSWORD) and role != "Student" and not st.session_state.get("staff_ok")
+    if locked:
+        _pw = st.text_input("Staff password", type="password", key="staff_pw",
+                            help="The TA and Faculty views are for course staff.")
+        if _pw:
+            if _pw == config.STAFF_PASSWORD:
+                st.session_state["staff_ok"] = True
+                locked = False
+            else:
+                st.error("Wrong password.")
     _subs = knowledge.list_subjects()
     if st.session_state.get("subject") not in _subs:
         st.session_state["subject"] = _subs[0]
@@ -285,7 +296,8 @@ with st.sidebar:
             _pct = f" {_j['progress'] * 100:.0f}%" if _kind == "evaluate" else ""
             st.caption(f":material/sync: Background: {_label}{_pct} (Faculty → Self-test)")
     if not llm.is_online():
-        st.warning("No API key found, so answers are extractive. Add your key to .env for AI answers.",
+        st.warning("No API key found, so answers are extractive. Add GOOGLE_API_KEY to .env "
+                   "(or to the app's Secrets when deployed) for AI answers.",
                    icon=":material/key:")
 
 
@@ -1166,6 +1178,27 @@ def reports_section(rows):
     with st.expander("Agent workflow (LangGraph)", icon=":material/account_tree:"):
         st.graphviz_chart(graph_dot())
         st.caption("Rose: guardrails. Amber: human in the loop. Dashed: conditional edge.")
+    with st.expander("Stored data", icon=":material/database:"):
+        st.caption("Everything DoubtLoop has stored: doubts and chats, TA memory and the course library. "
+                   "On a cloud deployment the server's disk is temporary, so download a copy before the app "
+                   "restarts (it restarts after every new push to GitHub and after long inactivity).")
+        everything = store.list_doubts(limit=100000)
+        c = st.columns(3)
+        c[0].metric("Doubts stored", len(everything))
+        c[1].metric("TA answers in memory", knowledge.ta_memory_count())
+        c[2].metric("Library files", len(knowledge.list_documents()))
+        if everything:
+            st.download_button("Download all doubts (CSV)", icon=":material/table:",
+                               data=pd.DataFrame(everything).to_csv(index=False).encode("utf-8"),
+                               file_name="doubtloop_doubts.csv", mime="text/csv")
+        if st.button("Prepare full backup (ZIP)", icon=":material/archive:"):
+            st.session_state["backup_zip"] = data_backup_zip()
+        if st.session_state.get("backup_zip"):
+            st.download_button("Download backup", data=st.session_state["backup_zip"], icon=":material/download:",
+                               file_name=f"doubtloop_backup_{time.strftime('%Y%m%d_%H%M')}.zip",
+                               mime="application/zip")
+            st.caption("Contains doubtloop.db (open with DB Browser for SQLite), ta_memory.json and the "
+                       "course library files.")
     with st.expander("Admin", icon=":material/settings:"):
         st.warning("Reset deletes all doubts and TA memory, then reloads the demo seed data. "
                    "Course library files are kept.")
@@ -1176,6 +1209,32 @@ def reports_section(rows):
         if col[1].button("Reset to empty"):
             service.reset_all(seed=False)
             st.rerun()
+
+
+def data_backup_zip() -> bytes:
+    """ZIP of all stored data: a consistent copy of the SQLite database, TA memory as JSON, library files."""
+    import io
+    import json
+    import sqlite3
+    import tempfile
+    import zipfile
+    from pathlib import Path
+
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        if config.DB_PATH.exists():
+            with tempfile.TemporaryDirectory() as tmp:
+                copy = Path(tmp) / config.DB_PATH.name
+                src, dst = sqlite3.connect(config.DB_PATH), sqlite3.connect(copy)
+                src.backup(dst)            # safe copy while the app is running
+                dst.close()
+                src.close()
+                z.write(copy, f"runtime/{config.DB_PATH.name}")
+        z.writestr("ta_memory.json", json.dumps(knowledge.list_ta_memory(), indent=1, ensure_ascii=False))
+        for f in sorted(config.NOTES_DIR.iterdir()):
+            if f.is_file():
+                z.write(f, f"data/course_notes/{f.name}")
+    return buf.getvalue()
 
 
 TYPE_LABEL = {"answerable": "Answerable from notes", "not_in_notes": "Not in notes (should go to TA)",
@@ -1317,7 +1376,9 @@ def faculty_view():
         reports_section(rows)
 
 
-if st.session_state.get("class_open") and subject() in knowledge.list_subjects():
+if locked:
+    html(ui.hero(f"{role} view", "This view is for course staff. Enter the staff password in the sidebar."))
+elif st.session_state.get("class_open") and subject() in knowledge.list_subjects():
     {"Student": student_view, "TA": ta_view, "Faculty": faculty_view}[role]()
 else:
     classes_home(role)

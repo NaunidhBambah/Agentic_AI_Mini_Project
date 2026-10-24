@@ -79,3 +79,8 @@ CONFIDENCE_THRESHOLD = float(_get("CONFIDENCE_THRESHOLD", "0.55"))
 TA_MATCH_SIM = float(_get("TA_MATCH_SIM", "0.68"))           # reuse a TA answer above this
 ASSIGNMENT_MATCH_SIM = float(_get("ASSIGNMENT_MATCH_SIM", "0.70"))
 MAX_QUESTION_CHARS = 800
+
+# ---------- Deployment ----------
+# Optional password for the TA and Faculty views (set it in Streamlit Secrets for a public deployment).
+# Empty = no password, as when running locally.
+STAFF_PASSWORD = _get("STAFF_PASSWORD", "")
