@@ -17,7 +17,7 @@ backgroundColor = "#13143A"
 secondaryBackgroundColor = "#1E1F52"
 
 [server]
-headless = false
+headless = true
 maxUploadSize = 15
 
 [browser]
